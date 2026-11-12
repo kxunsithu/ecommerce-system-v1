@@ -7,7 +7,19 @@ const confirmPassword = document.getElementById('confirm_password');
 
 const createBtn = document.getElementById('create-btn');
 
-createBtn.addEventListener('click',  () => {
+createBtn.addEventListener('click', () => {
+    if (password.value.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        password.focus();
+        return;
+    }
+
+    if (password.value !== confirmPassword.value) {
+        alert('Passwords do not match. Please re-enter them.');
+        confirmPassword.focus();
+        return;
+    }
+
     const userData = {
         name: name.value,
         email: email.value,
@@ -21,5 +33,4 @@ createBtn.addEventListener('click',  () => {
 
     // Redirect to login page after registration
     window.location.href = './login.html';
-
 });

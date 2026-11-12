@@ -74,3 +74,31 @@ function renderHomePage(products) {
 }
     
 loadProducts();
+
+// Check if user is logged in
+
+const isLoggedIn = localStorage.getItem('isLoggedIn');
+const userData = JSON.parse(localStorage.getItem('userData'));
+const deskAuthContainer = document.getElementById('desk-auth-container');
+
+if (isLoggedIn === 'true') {
+  deskAuthContainer.innerHTML = `
+
+  <span class="text-gray-700">${userData.name}</span>
+
+  <button id="logout-btn" class="px-4 py-2 text-blue-600 border border-blue-600
+                      rounded-lg hover:bg-blue-50 transition">
+    Logout
+  </button>
+  `
+}
+
+const logoutBtn = document.getElementById('logout-btn');
+
+logoutBtn?.addEventListener('click', () => {
+    localStorage.removeItem('isLoggedIn');
+
+    window.location.href = './login.html';
+  })
+
+

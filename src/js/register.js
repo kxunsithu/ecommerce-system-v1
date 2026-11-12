@@ -8,6 +8,17 @@ const confirmPassword = document.getElementById('confirm_password');
 const createBtn = document.getElementById('create-btn');
 
 createBtn.addEventListener('click',  () => {
+
+    if(password.value.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        return;
+    }
+
+    if(password.value !== confirmPassword.value) {
+        alert('Passwords do not match.');
+        return;
+    }
+
     const userData = {
         name: name.value,
         email: email.value,

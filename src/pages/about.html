@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MyShop</title>
+  <link href="../output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="./home.html" class="text-2xl font-bold text-blue-600">
+          MyShop
+        </a>
+        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <a href="./home.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+          <a href="./products.html" class="text-gray-700 hover:text-blue-600 transition">Products</a>
+          <a href="./about.html" class="text-blue-600 font-semibold transition">About</a>
+          <a href="./home.html#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+        </div>
+        <div id="auth-buttons-desktop" class="hidden md:flex items-center space-x-3">
+          <a href="./login.html" class="px-4 py-2 text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition">Login</a>
+          <a href="./register.html" class="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+        Our Story
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+        About MyShop
+      </h1>
+      <p class="text-lg text-gray-600 leading-relaxed mb-10">
+        MyShop is dedicated to providing high-quality products at accessible prices with dependable service, fast shipping, and an enjoyable online shopping experience.
+      </p>
+      <a href="./products.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition shadow-sm hover:shadow-md">
+        Explore All Products &rarr;
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm text-gray-500">
+      &copy; 2026 MyShop. All rights reserved.
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavbarAuth } from '../js/auth.js';
+    initNavbarAuth();
+  </script>
+</body>
+
+</html>
+

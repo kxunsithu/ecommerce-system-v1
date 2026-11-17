@@ -73,7 +73,7 @@ function renderHomePage(products) {
 
                 <!-- Product Details -->
                 <div class="p-5 flex flex-col flex-1 border-t border-gray-50">
-      
+                    
                   <!-- Title -->
                   <h3 class="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2 min-h-[2.5rem] leading-snug mb-3" title="${p.title}">
                     ${p.title}
